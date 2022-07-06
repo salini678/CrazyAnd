@@ -60,13 +60,6 @@ stages:
       vmImage: 'ubuntu-latest'
 
     steps:
-    - task: AppCenterTest@1
-      inputs:
-        appFile: '**/*.apk'
-        artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-        frameworkOption: 'appium'
-        credentialsOption: 'serviceEndpoint'
-        localeOption: 'en_US'
     - task: AppCenterDistribute@3
       inputs:
         serverEndpoint: 'serviceconnection'
@@ -74,4 +67,11 @@ stages:
         appFile: '**/*.apk'
         releaseNotesOption: 'input'
         destinationType: 'groups'
-
+    
+    - task: AppCenterTest@1
+      inputs:
+        appFile: '**/*.apk'
+        artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+        frameworkOption: 'appium'
+        credentialsOption: 'serviceEndpoint'
+        localeOption: 'en_US'
