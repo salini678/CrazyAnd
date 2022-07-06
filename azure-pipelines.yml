@@ -60,14 +60,17 @@ stages:
       vmImage: 'ubuntu-latest'
 
     steps:
+ 
+    steps:
     - task: AppCenterDistribute@3
+      displayName: 'Deploy $(System.DefaultWorkingDirectory)/_TestAndroid-Xamarin.Android-CI/drop/Perfect_Body.Perfect_Body.apk to Visual Studio App Center'
       inputs:
-        serverEndpoint: 'serviceconnection'
-        appSlug: 'SaliniK/SampleAndroidApp'
-        appFile: '**/*.apk'
-        releaseNotesOption: 'input'
-        destinationType: 'groups'
-    
+        serverEndpoint: serviceconnection
+        appSlug: SaliniK/SampleAndroidApp
+        appFile: '$(System.DefaultWorkingDirectory)/_TestAndroid-Xamarin.Android-CI/drop/Perfect_Body.Perfect_Body.apk'
+        symbolsIncludeParentDirectory: false
+        releaseNotesInput: 'New Release v2.0'
+        isSilent: false
     - task: AppCenterTest@1
       inputs:
         appFile: '**/*.apk'
