@@ -61,7 +61,7 @@ stages:
 
     steps:
  
-    steps:
+    
     - task: AppCenterDistribute@3
       displayName: 'Deploy $(System.DefaultWorkingDirectory)/_TestAndroid-Xamarin.Android-CI/drop/Perfect_Body.Perfect_Body.apk to Visual Studio App Center'
       inputs:
