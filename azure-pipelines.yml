@@ -67,14 +67,11 @@ stages:
         frameworkOption: 'appium'
         credentialsOption: 'serviceEndpoint'
         localeOption: 'en_US'
-
     - task: AppCenterDistribute@3
       inputs:
-        serverEndpoint: 'AppCenterServiceConnection'
-        appSlug: 'salinikrovi-gmail.com/SampleAndroid'
+        serverEndpoint: 'serviceconnection'
+        appSlug: 'SaliniK/SampleAndroidApp'
         appFile: '**/*.apk'
         releaseNotesOption: 'input'
-        releaseNotesInput: 'New Release v2.0'
         destinationType: 'groups'
-
 
