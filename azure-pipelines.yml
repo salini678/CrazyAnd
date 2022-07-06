@@ -11,7 +11,7 @@ stages:
   jobs:
   - job: Build
     pool:
-      vmImage: 'vs2017-win2016'
+      vmImage: 'ubuntu-latest'
 
     steps:
     - task: Gradle@2
@@ -57,7 +57,7 @@ stages:
   jobs:
   - job: Deploy
     pool:
-      vmImage: 'vs2017-win2016'
+      vmImage: 'ubuntu-latest'
 
     steps:
     - task: AppCenterTest@1
