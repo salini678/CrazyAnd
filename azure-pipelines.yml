@@ -62,7 +62,7 @@ stages:
       inputs:
         serverEndpoint: serviceconnection
         appSlug: SaliniK/SampleAndroidApp
-        appFile: _salini678.CrazyAnd/drop/app/build/outputs/apk/release/my-crazy-app.release.apk'
+        appFile: salini678.CrazyAnd/drop/app/build/outputs/apk/release/my-crazy-app.release.apk'
         symbolsIncludeParentDirectory: false
         releaseNotesInput: 'New Release v2.0'
         isSilent: false
