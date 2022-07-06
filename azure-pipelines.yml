@@ -67,7 +67,7 @@ stages:
       inputs:
         serverEndpoint: serviceconnection
         appSlug: SaliniK/SampleAndroidApp
-        appFile: '$(System.DefaultWorkingDirectory)/_TestAndroid-Xamarin.Android-CI/drop/Perfect_Body.Perfect_Body.apk'
+        appFile: '**/*.apk' 
         symbolsIncludeParentDirectory: false
         releaseNotesInput: 'New Release v2.0'
         isSilent: false
