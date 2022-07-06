@@ -52,10 +52,10 @@ stages:
         ArtifactName: 'drop'
         publishLocation: 'Container'
 
-stages:
-- stage: Build
+
+- stage: Deploy
   jobs:
-  - job: Build
+  - job: Deploy
     pool:
       vmImage: 'vs2017-win2016'
 
