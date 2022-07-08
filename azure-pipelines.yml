@@ -51,18 +51,3 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
-- stage: Deploy
-  jobs:
-  - job: Deploy
-    pool:
-      vmImage: 'ubuntu-latest'
-    steps:
-    - task: AppCenterDistribute@3
-      displayName: 'Deploy $(System.DefaultWorkingDirectory)/_salini678.CrazyAnd/drop/app/build/outputs/apk/release/my-crazy-app.release.apk to Visual Studio App Center'
-      inputs:
-        serverEndpoint: serviceconnection
-        appSlug: SaliniK/SampleAndroidApp
-        appFile: '**/*.apk'
-        symbolsIncludeParentDirectory: false
-        releaseNotesInput: 'New Release v2.0'
-        isSilent: false
